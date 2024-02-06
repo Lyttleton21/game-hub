@@ -9,7 +9,7 @@ const GameHeading = ({ gameQuery }: Props) => {
   const heading = `${gameQuery.platform?.name || ""} ${
     gameQuery.genre?.name || ""
   } Games`;
-  if (!gameQuery.platform?.name && !gameQuery.genre?.name) return "";
+  if (!gameQuery.platform?.name && !gameQuery.genre?.name) return null;
   return (
     <Heading as="h1" marginY={5}>
       {heading}
